@@ -42,3 +42,5 @@ imprimirimagen(R,G,B);
 }
 //gcc imagen.c -o a.out
 //./a.out i.ppm; eog salida.ppm
+
+//llaalalalalalala
