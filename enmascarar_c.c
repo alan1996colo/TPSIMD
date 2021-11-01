@@ -127,22 +127,19 @@ clock_t tiempo_inicio, tiempo_final, tmasmf , tmasm;
   enmascarar_c(memoriaParaImg1, memoriaParaImg2, mascara, cant);
  tiempo_final = clock();
   segundos = ( double)(tiempo_final - tiempo_inicio) / CLOCKS_PER_SEC;
-  printf("enmascarar_C comenzo en el tiempo %.16ld \n", tiempo_inicio);
-  printf("enmascarar_C termino en el tiempo %.16ld \n", tiempo_final);
+  
   printf("el tiempo de enmascarado en c es de ");
   printf("%.16g milisegundos\n", segundos * 1000.0);
 
 
-  tmasm=clock();
+  tiempo_inicio = clock();
   enmascarar_asm(memoriaParaImg1, memoriaParaImg2, mascara, cant);
-  tmasmf = clock();  
-  printf("enmascarar_asm comenzo en el tiempo %.16ld  \n", tmasm);
-  printf("enmascarar_asm termino en el tiempo %.16ld  \n", tmasmf);
-    double segasm= 0.0;
- 
-  segasm=( double)(tmasmf - tmasm) /( CLOCKS_PER_SEC);
+  tiempo_final = clock();
   
-  printf("tiempo de enmascarado en asm %.16g milisegundos\n", segasm *1000.0);
+    
+ segundos = ( double)(tiempo_final - tiempo_inicio) / CLOCKS_PER_SEC;
+ segundos = ( double)(tiempo_final - tiempo_inicio) / CLOCKS_PER_SEC;
+ printf("tiempo de enmascarado en asm %.16g milisegundos\n", segundos *1000.0);
   guardarImagen("salida_c.rgb", cant, memoriaParaImg1);
   guardarImagen("salida_asm.rgb", cant, memoriaParaImg1);
 
