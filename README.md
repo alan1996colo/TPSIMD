@@ -22,6 +22,9 @@ En esta primera parte, la versión del programa ejecuta ambas funciones devolvie
 
 ### Conclusiones
 Trabajo completo en --->https://github.com/jmcorbera/MaskWithSIMD
+
 Nota: Aprobado
+
 Comentario: Falto restringir con alguna condicion el enmascarado para los casos en que la cantidad de pixeles no sean multiplo de 8. (para el lado de asembler)
+
 
